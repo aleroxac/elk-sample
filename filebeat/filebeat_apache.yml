@@ -1,0 +1,18 @@
+filebeat.inputs:
+  - type: log
+    enabled: true
+    paths:
+      - "/logs/apache.log"
+    fields:
+      log_type: apache
+    fields_under_root: true
+    exclude_files: ['\.gz$', '\.tar$']
+    tail_files: true
+    close_inactive: 15m
+
+
+output.logstash:
+  enabled: true
+  hosts: ["ls01:5044"]
+  username: "elastic"
+  password: "changeme"

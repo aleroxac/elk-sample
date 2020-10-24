@@ -1,0 +1,10 @@
+---
+http.host: "0.0.0.0"
+monitoring.elasticsearch.hosts: [ "http://es01:9200" ]
+monitoring.elasticsearch.username: elastic
+monitoring.elasticsearch.password: changeme
+
+config.reload.automatic: true
+config.reload.interval: 10s
+# config.debug: true
+# log.level: debug
