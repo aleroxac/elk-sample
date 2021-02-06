@@ -11,8 +11,7 @@ services:
       - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
       - node.name=es01
     volumes:
-      - ./elasticsearch/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
-      # - ./elasticsearch/plugins/:/usr/share/elasticsearch/plugins
+      - ./elasticsearch/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
     ports:
       - "9200:9200"
       - "9300:9300"
