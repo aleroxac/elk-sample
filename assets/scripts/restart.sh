@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-INDEXES="{$1}-*"
+INDEXES="{$1}*"
 
 curl -s -XDELETE "localhost:9200/${INDEXES}" --user elastic:changeme; echo
 docker rm -f fb01 ls01

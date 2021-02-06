@@ -1,0 +1,16 @@
+filebeat.inputs:
+  ## ----------------- Apache logs -----------------
+  - type: log
+    enabled: true
+    paths:
+      - "/logs/apache.log"
+    fields:
+      log_type: apache
+    fields_under_root: true
+    exclude_files: ['\.gz$', '\.tar$']
+
+
+
+output.logstash:
+  enabled: true
+  hosts: ["ls01:12201"]
